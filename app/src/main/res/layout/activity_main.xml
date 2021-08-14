@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.todolist.MainActivity">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:id="@+id/material_toolbar_id"
+            >
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/searchId"
+                android:src="@drawable/ic_search"
+                android:layout_gravity="end"
+                />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.todolist.fragments.HomeFragment"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="57dp"
+            android:id="@+id/fragment_id"
+            />
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:backgroundTint="#00000000">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navigationId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                app:backgroundTint="#FFFFFF"
+                app:elevation="0dp"
+                app:menu="@menu/bottom_nav_menu" />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_button_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#323131"
+            android:src="@drawable/ic_baseline_add_24"
+            app:backgroundTint="#00000000"
+            app:fabSize="auto"
+            app:layout_anchor="@id/bottom_app_bar_id"
+            app:maxImageSize="34dp"
+            app:tint="@color/white" />
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
+

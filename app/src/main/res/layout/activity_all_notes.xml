@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".BottomActivities.AllNotesActivity"
+android:background="@color/white"
+android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="38dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:tint="@color/black"
+        android:id="@+id/all_notes_backId"
+        />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="16dp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Hello"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Ram!"
+        android:textSize="24sp"
+        android:id="@+id/allnotes_text_id"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        />
+
+</LinearLayout>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Here's all your previous tasks!"
+    android:layout_gravity="center_horizontal"
+    />
+
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/allnotes_recycler_view_id"
+    tools:listitem="@layout/note_item_view"
+    />
+
+</LinearLayout>
+</layout>

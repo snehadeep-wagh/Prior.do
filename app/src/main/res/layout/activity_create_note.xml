@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BottomActivities.CreateNote">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="24dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/back_button_id"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="Create new task"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/notes_task_name_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="28dp"
+                android:hint="Task name"
+                android:textSize="14sp"
+                />
+
+            <EditText
+                android:id="@+id/notes_task_description_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="28dp"
+                android:hint="Task description"
+                android:textSize="14sp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginStart="32dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:paddingEnd="92dp">
+
+                    <ImageView
+                        android:id="@+id/calendar_id"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/ic_calendar" />
+
+                    <TextView
+                        android:id="@+id/calendar_text_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="28dp"
+                        android:text="Date"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal"
+                    android:paddingEnd="92dp">
+
+                    <ImageView
+                        android:id="@+id/notification_id"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/ic_baseline_notifications_24" />
+
+                    <TextView
+                        android:id="@+id/start_time_text_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="28dp"
+                        android:text="Start time"
+                        android:textSize="15sp"
+                        android:focusable="true"
+                        android:clickable="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/end_time_text_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp"
+                        android:text="End time"
+                        android:textSize="15sp"
+                        android:focusable="true"
+                        android:clickable="true"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal"
+                    android:paddingEnd="92dp">
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/remind_me_id"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/ic_baseline_notifications_24" />
+
+                    <TextView
+                        android:id="@+id/switch_text_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:text="Remind me"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Priority"
+                android:textSize="16sp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="14dp"
+                android:textColor="@color/black"
+                />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/priority_group_id"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Low"
+                        android:textSize="14sp"
+                        android:button="@android:color/transparent"
+                        android:textColor="@drawable/text_color"
+                        android:background="@drawable/radio_selector"
+                        android:elevation="5dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:layout_margin="14dp"
+                        android:id="@+id/radio_low_id"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medium"
+                        android:textSize="14sp"
+                        android:button="@android:color/transparent"
+                        android:textColor="@drawable/text_color"
+                        android:background="@drawable/radio_selector"
+                        android:elevation="5dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:layout_margin="14dp"
+                        android:id="@+id/radio_med_id"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="High"
+                        android:textSize="14sp"
+                        android:button="@android:color/transparent"
+                        android:textColor="@drawable/text_color"
+                        android:background="@drawable/radio_selector"
+                        android:elevation="5dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:layout_margin="14dp"
+                        android:id="@+id/radio_high_id"
+                        />
+
+                </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textSize="16sp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:id="@+id/category_group_id"
+                >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Work"
+                    android:button="@android:color/transparent"
+                    android:textColor="@drawable/text_color"
+                    android:background="@drawable/radio_selector"
+                    android:elevation="5dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:layout_margin="14dp"
+                    android:id="@+id/radio_work_id"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Family"
+                    android:button="@android:color/transparent"
+                    android:textColor="@drawable/text_color"
+                    android:background="@drawable/radio_selector"
+                    android:elevation="5dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:layout_margin="14dp"
+                    android:id="@+id/radio_family_id"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="School"
+                    android:button="@android:color/transparent"
+                    android:textColor="@drawable/text_color"
+                    android:background="@drawable/radio_selector"
+                    android:elevation="5dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:layout_margin="14dp"
+                    android:id="@+id/radio_school_id"
+                    />
+
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Create"
+                android:backgroundTint="#2196F3"
+                android:padding="16dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp"
+                android:id="@+id/create_button_id"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+</layout>
